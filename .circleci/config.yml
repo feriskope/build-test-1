@@ -1,0 +1,10 @@
+version: 2.0
+jobs:
+  build:
+    parallelism: 4
+    docker:
+      - image: ubuntu:latest
+    steps:
+      - checkout
+      - run: lscpu
+      - run: apt update
